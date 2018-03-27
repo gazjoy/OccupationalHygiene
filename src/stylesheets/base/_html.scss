@@ -1,0 +1,24 @@
+/**
+ * Box Sizing
+ */
+
+*,
+input, textarea, button {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+html {
+    background-color: color(neutral, white);
+}
+
+body {
+    background-color: color(neutral, lightest);
+}
+
+//.cc-mode-preview {
+//    padding-top: 80px;
+//}

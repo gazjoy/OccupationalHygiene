@@ -1,0 +1,41 @@
+/**
+ * Topper
+ */
+
+.topper {
+    position: fixed;
+    z-index: $z-9;
+    bottom: -100%;
+    right: spacing();
+    display: block;
+    padding: spacing(sm);
+    text-align: center;
+    text-decoration: none;
+    background-color: color(brand, aqua);
+    color: color(neutral, white);
+    fill: currentColor;
+    transition: all 0.4s ease;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    opacity: 0.8;
+    
+    &:hover {
+        opacity: 1;
+    }
+    
+    &.is-active {
+        bottom: 0;
+    }
+    
+    &.is-faded {
+        opacity: .5;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    
+    &__text {
+        display: block;
+        font-size: $font-size-sm;
+    }
+}

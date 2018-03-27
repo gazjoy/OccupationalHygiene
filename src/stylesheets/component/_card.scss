@@ -1,0 +1,79 @@
+/**
+ * Card
+ */
+
+.card,
+%card {
+    display: block;
+    text-decoration: none;
+    border: seperator(base, width) seperator(base, style) seperator(base, color);
+    background-color: color(neutral, white);
+    border-radius: $border-radius;
+
+    > [class*="__header"] {
+        border-bottom: seperator(base, width) seperator(base, style) seperator(base, color);
+
+        > * {
+            margin-bottom: 0;
+        }
+    }
+
+    > [class*="__body"] > *:last-child {
+        margin-bottom: 0;
+    }
+
+    > [class*="__header"],
+    > [class*="__body"],
+    > [class*="__footer"] {
+        padding: spacing(lg);
+    }
+
+    > [class*="__footer"] {
+        border-top: seperator(base, width) seperator(base, style) seperator(base, color);
+    }
+}
+
+a.card,
+a%card {
+    
+    &:hover {
+        background-color: lighten(color(brand, sky), 10%);
+    }
+}
+
+
+$card-inline-bp: 707px;
+.card--inline {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    .card__header {
+        flex: 0 1 120px;
+        border-bottom: 0;
+        border-right: seperator(base, width) seperator(base, style) seperator(base, color);
+    }
+    
+
+    .card__body {
+        flex: 1 1 400px;
+        
+    }
+    .card__footer {
+        flex: 1 0 142px;
+
+        @include breakpoint($card-inline-bp) {
+            flex-grow: 0;
+            border-top: 0;
+            border-left: seperator(base, width) seperator(base, style) seperator(base, color);
+        }
+    }
+
+    @include breakpoint($card-inline-bp) {
+        .card__header,
+        .card__footer {
+            display: flex;
+            align-items: center;
+        }
+    }
+}

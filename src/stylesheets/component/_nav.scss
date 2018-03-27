@@ -1,0 +1,70 @@
+/**
+ * Nav
+ */
+
+.nav,
+%nav {
+    @extend %u-list-unstyled;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+
+/**
+ * Nav Pills
+ */
+
+.nav--pills,
+%nav--pills {
+    a {
+        display: block;
+        padding: spacing(xs) 0;
+    }
+}
+
+
+/**
+ * Nav Inline
+ */
+
+.nav--inline,
+%nav--inline {
+    @include flex;
+    @include flex-wrap(wrap);
+    white-space: nowrap;
+}
+
+
+/**
+ * Nav Space
+ */
+
+.nav--space,
+%nav--space {
+    &:not(.nav--inline) > * {
+        margin-bottom: spacing(sm);
+    }
+
+    &.nav--inline > * {
+        margin-right: spacing(sm);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+
+/**
+ * Nav Branded
+ */
+
+.nav--branded,
+%nav--branded {
+    @extend %nav;
+    @extend %nav--pills;
+    @extend %u-text-uppercase;
+    font-weight: $bold;
+}

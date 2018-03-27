@@ -1,0 +1,14 @@
+/**
+ * Theme Steel
+ */
+
+.t-steel,
+%t-steel {
+    @extend %u-fill-brand-steel;
+    
+    &,
+    a:not(.btn) {
+        @extend %u-text-neutral-white;
+    }
+    
+}

@@ -1,0 +1,14 @@
+/**
+ * Theme Aqua
+ */
+
+.t-aqua,
+%t-aqua {
+    @extend %u-fill-brand-aqua;
+    
+    &,
+    a:not(.btn) {
+        @extend %u-text-neutral-white;
+    }
+    
+}

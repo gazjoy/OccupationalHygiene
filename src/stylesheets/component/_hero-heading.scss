@@ -1,0 +1,17 @@
+/**
+ * Hero Heading
+ */
+
+.hero-heading {
+    @extend %h1;
+
+    font-size: $hero-heading-min;
+
+    @include breakpoint($screen-min) {
+        font-size: calc(#{$hero-heading-min} + #{strip-unit($hero-heading-max - $hero-heading-min)} * ((82.7vw - #{$screen-min}) / #{strip-unit($screen-max - $screen-min)}));
+    }
+
+    @include breakpoint($screen-max) {
+        font-size: $hero-heading-max;
+    }
+}

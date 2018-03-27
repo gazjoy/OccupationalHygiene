@@ -1,0 +1,47 @@
+/**
+ * Spin
+ *
+ * @since 3.0.0
+ */
+
+.u-spin,
+%u-spin {
+    animation: spin 0.3s infinite linear;
+}
+
+.u-whirr-once,
+%u-whirr-once {
+    animation: whirr-short 4s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.u-whirr-infinite,
+%u-whirr-infinite {
+    animation: whirr-long 4s ease-in-out infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes whirr-short {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(360deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes whirr-long {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+// https://codepen.io/arqex/pen/fAhoD
+@keyframes wash {
+    100% {
+        transform: rotate(1800deg);
+    }
+}

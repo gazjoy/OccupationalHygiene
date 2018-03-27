@@ -1,0 +1,54 @@
+/**
+ * Step Icon
+ */
+
+.step-icon,
+%step-icon {
+    display: inline-block;
+    position: relative;
+    margin-bottom: spacing();
+    
+    &__step {
+        @include flex;
+        @include align-items(center);
+        @include justify-content(center);
+        width: 2em;
+        height: 2em;
+        border-radius: 100%;
+        position: absolute;
+        top: 50%;
+        left: -#{spacing()};
+        transform: translateY(-50%);
+        text-align: center;
+        border: 3px solid color(brand, steel);
+        font-size: $font-size-lg;
+    }
+    
+    .icon {
+        padding: spacing();
+        border: 3px solid color(neutral, white);
+    }
+    
+//    &:first-of-type .step-icon__step {
+//        @extend %u-fill-brand-aqua;
+//    }
+//    &:last-of-type .step-icon__step {
+//        @extend %u-fill-brand-gold;
+//    }
+}
+
+.t-gold {
+    background-color: color(brand, gold);
+    color: color(brand, steel);
+    fill: color(brand, steel);
+}
+.t-aqua {
+    background-color: color(brand, aqua);
+    color: color(neutral, white);
+    fill: color(neutral, white);
+}
+.t-sky {
+    background-color: color(brand, sky);
+    color: color(brand, steel);
+    fill: color(brand, steel);
+}

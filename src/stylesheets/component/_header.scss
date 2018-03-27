@@ -1,0 +1,122 @@
+/**
+ * Header
+ * offset the fixed header
+ */
+$header-height: 65px;
+
+[role="main"] {
+    padding-top: $header-height;
+}
+
+.header {
+    @extend %u-separator-bottom;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @include flex;
+    @include align-items(center);
+    z-index: $z-9;
+    background-color: color(neutral, white);
+    transition: height 350ms cubic-bezier(0.23, 1, 0.32, 1);
+    
+    @include breakpoint(screen(md)) {
+        padding-left: spacing();
+        padding-right: spacing();
+    }
+}
+
+
+/**
+ * Header State
+ */
+
+.header.is-active {}
+
+
+/**
+ * Header Contents
+ */
+
+.header__header,
+.header__body {
+    padding: spacing();
+}
+
+
+/**
+ * Header Header
+ */
+
+.header__header {}
+
+
+/**
+ * Header Body
+ */
+
+.header__body {
+    @include flex;
+    @include align-items(center);
+    flex-grow: 1;
+    width: 100%;
+    @include breakpoint(max-width screen(xs, max)) {
+        padding-left: 0;
+    }
+}
+
+
+/**
+ * Header Nav
+ */
+
+.header__nav {
+    width: 100%;
+    .nav {
+        @include flex;
+        flex-grow: 1;
+        > li {
+            margin-left: spacing();
+            > a:hover {
+                color: color(brand, aqua);
+            }
+        }
+        > *:first-child {
+            margin-left: auto;
+        }
+		@include breakpoint(screen(md)) {
+	        > *:last-child {
+	            margin-right: auto;
+	        }
+		}
+    }
+    @include breakpoint(max-width screen(xs, max)) {
+        font-size: 80%;
+    }
+    @include breakpoint(screen(lg)) {
+        font-size: 130%;
+    }
+}
+
+.header__tel {
+	margin-left: auto;
+	flex-shrink: 0;
+    @extend %u-text-uppercase;
+    font-weight: $bold;
+    a:hover {
+        color: color(brand, aqua);
+    }
+}
+
+
+/**
+ * Header Logo
+ */
+
+.header__logo {
+    display: block;
+    width: 130px;
+    @include breakpoint(max-width screen(xs, max)) {
+        max-width: 70px;
+    }
+}

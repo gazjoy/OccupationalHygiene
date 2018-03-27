@@ -1,0 +1,87 @@
+/**
+ * Modal
+ */
+
+.modal,
+%modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    backface-visibility: hidden;
+    visibility: hidden;
+}
+
+.is-active.modal {
+    visibility: visible;
+
+    .modal__dialog {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/**
+ * Modal Dialog
+ */
+
+.modal__dialog {
+    // background-color: color(neutral, white);
+    margin-top: 5em;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20%);
+    transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+}
+
+.modal--sm .modal__dialog {
+    max-width: 26em;
+}
+
+.modal--lg .modal__dialog {
+    max-width: 42em;
+}
+
+
+/**
+ * Modal Close
+ */
+
+.modal__close {
+    position: fixed;
+    top: spacing();
+    right: spacing(lg);
+    z-index: $z-1;
+    font-size: $font-size-lg;
+    color: color(brand, steel);
+    fill: color(brand, steel);
+    transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.is-active .modal__close {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.modal__nav {
+    font-size: $font-size-lg;
+    a {
+        border-left: 0 solid color(brand, aqua);
+        padding-left: spacing(lg) !important;
+        transform: translateX(0%);
+        transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+        &:hover {
+            border-left-width: spacing();
+            // text-decoration: underline;
+            // transform: translateX(10px);
+        }
+    }
+}
