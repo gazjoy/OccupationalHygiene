@@ -1,3 +1,6 @@
 {
-  "message": "Occupational Hygiene"
+  "message": "Occupational Hygiene",
+  "company_name": "OHSL",
+  "company_tel": "0123456789",
+  "company_email": "test@test.com"
 }

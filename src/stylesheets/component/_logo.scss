@@ -2,47 +2,48 @@
  * Logo
  */
 
-.logo {
-    @include flex;
-    @include align-items(center);
+.logo,
+.-logo-inline {
+    // @include flex;
+    // @include align-items(center);
     
-    > * {
-        display: inherit;
-    }
+    // > * {
+    //     display: inherit;
+    // }
     
-    &__logo {
-        margin-right: spacing(sm);
-    }
+    // &__logo {
+    //     margin-right: spacing(sm);
+    // }
 	
-	svg {
-		width: 100%;
-	}
+	// svg {
+	// 	width: 100%;
+	// }
 	
-    @include breakpoint(max-width screen(xs, max)) {
-        &__logo {
-            width: 35px;
-			height: 35px;
-			margin-right: 5px;
-        }
+    // @include breakpoint(max-width screen(xs, max)) {
+    //     &__logo {
+    //         width: 35px;
+	// 		height: 35px;
+	// 		margin-right: 5px;
+    //     }
     
-        &__text {
-            width: 35px;
-			height: 12px;
-        }
-	}
+    //     &__text {
+    //         width: 35px;
+	// 		height: 12px;
+    //     }
+	// }
 	
-    @include breakpoint(screen(sm)) {
-        > * {
-            flex-shrink: 0;
-        }
-        &__logo {
-            width: 50px;
-			height: 50px;
-        }
+    // @include breakpoint(screen(sm)) {
+    //     > * {
+    //         flex-shrink: 0;
+    //     }
+    //     &__logo {
+    //         width: 50px;
+	// 		height: 50px;
+    //     }
     
-        &__text {
-            width: 60px;
-			height: 20px;
-        }
-    }
+    //     &__text {
+    //         width: 60px;
+	// 		height: 20px;
+    //     }
+    // }
 }
