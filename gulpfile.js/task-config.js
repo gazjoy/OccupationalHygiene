@@ -11,7 +11,12 @@ module.exports = {
     entry: {
       // files paths are relative to
       // javascripts.dest in path-config.json
-      app: ["./app.js"]
+      app: ["./app.js"],
+      jquery: ["./lib/jquery.js"]
+    },
+    provide: {
+      $: "jquery",
+      jQuery: "jquery"
     }
   },
 

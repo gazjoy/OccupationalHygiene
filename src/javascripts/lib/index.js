@@ -1,3 +1,3 @@
-import 'jquery'
-import 'jquery-no-conflict'
-import 'jquery-ui'
+require('lib/jquery')
+require('lib/jquery-no-conflict')
+require('lib/jquery-ui')
