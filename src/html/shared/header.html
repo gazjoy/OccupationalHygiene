@@ -5,13 +5,32 @@
         </div>
     </div>
     <div class="header__body">
-        <nav class="header__nav">
+        <button class="ui-btn ui-menu-toggle u-visible-xs">Menu</button>
+
+        <nav class="ui-nav ui-nav-mobile">
+            <button class="ui-btn ui-menu-close">Close Menu</button>
+            <ul class="nav nav--pills">
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+            </ul>
+        </nav>
+
+        <nav class="header__nav u-hidden-xs">
             <ol class="nav nav--branded">
                 <li>
                     <a href="#" data-cc-toggle-action="activate" data-cc-toggle-target="#subnav">Solutions</a>
+                    <ul> 
+                        <li><a title="Noise Monitoring" href="/noise-monitoring.html">Noise Monitoring</a></li> 
+                        <li><a title="Air Monitoring" href="/air-monitoring.html">Air Monitoring</a></li> 
+                        <li><a title="LEV Testing" href="/local-exhaust-ventilation.html">Local Exhaust Ventilation (LEV)</a></li> 
+                        <li><a title="COSHH" href="/coshh.html">Hazardous Substances (COSHH)</a></li> 
+                        <li><a title="Indoor Air Quality &amp; Lighting" href="/lighting-indoor-air-quality.html">Indoor Air Quality &amp; Lighting</a></li> 
+                    </ul>
                 </li>
-                <li><a href="#">Training</a></li>
-                <li><a href="#">Profile</a></li>
+                <li><a href="/occupational-hygiene-training.html">Training</a></li>
+                <li><a href="/profile.html">Profile</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ol>
         </nav>
