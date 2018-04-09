@@ -1,0 +1,75 @@
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+
+    <section class="u-clearfix t-steel">
+		
+		<div class="u-section-lg u-container-lg">
+			<h1 class="hero-heading">Managing noise exposure,<br class="u-hidden-xs"> <i class="u-text-brand-gold">sound</i> advice from experts.</h1>
+            <div class="u-section-sm u-measure-md-10 u-measure-lg-7">
+                <p class="lead">We can conduct a workplace noise survey that will assist your company in complying with it's duties under Regulation 5 of The Control of Noise at Work Regulations 2005.</p>
+            </div>
+            <p><a href="/contact.html" class="btn btn--lg btn--brand-gold js-anchor-nav">Book a Consultation</a></p>
+		</div>
+
+   </section>
+
+
+   <section class="u-clearfix" id="solutions">
+        <hr class="striped u-space-none" />
+        
+        <div class="u-section-lg u-container-lg">
+            
+            <header class="title">
+                <h2 class="h1 u-measure-md-9">Noise Monitoring</h2>
+                <p class="h4"><i>Protection against hearing loss</i></p>
+            </header>
+            
+            <div class="grid g-gutter-lg">
+                
+                <div class="g-col-lg-6">
+                    
+                    <div>
+                        <p>The aim of The Control of Noise at Work Regulations (CoNAWR) 2005 is to ensure that workers’ hearing is protected from excessive noise at their place of work, which could result in work related noise induced hearing loss.</p>
+                        
+                        <p>Under Regulation 5 of the Control of Noise at Work Regulations, employers are required to assess the risks to its employee’s health and safety created by exposure to noise in the workplace.</p>
+ 
+ 
+                        <p>One way of doing this is to carry out a workplace noise monitoring survey (Reg 5 (2) C). The results of conducting a workplace noise monitoring survey will aid the company in formulating its Action Plan to reduce exposures to noise, as required by the Regulations.</p>
+                    
+                            <p><b>OHSL</b> can conduct a workplace noise survey that will assist the company in complying with it’s duties under Regulation 5 of “The Control of Noise at Work Regulations 2005”. The objective of the workplace noise survey will be to:</p>
+ 
+                            <ul>
+                                <li>Identify all workers who are likely to be exposed to the first action level or above.</li>
+                                <li>Provide your company with enough information to enable appropriate action to be taken.</li>
+                                <li>Identify significant noise sources within the work area.</li>
+                            </ul>
+                     </div>
+                 
+                </div>
+                <div class="g-col-lg-6">
+                     
+                     <div>
+                         <h3>Action Levels</h3>
+                         <p>The action levels described in the Regulations are:</p>
+                         <ul>
+                             <li>Lower Exposure Action <span>Value-a daily personal noise exposure<br>(L<sub>aex</sub>,8h) of 80 dB</span></li>
+                             <li>Upper Exposure <span>Action Level - a daily personal noise exposure<br>(L<sub>aex</sub>,8h) of 85 dB</span></li>
+                             <li>Maximum Exposure Limit Value <span>- a daily personal noise exposure<br>(L<sub>aex</sub>,8h) of 87 dB (including hearing protection)</span></li>
+                         </ul>
+                     </div>
+                 
+                 
+                </div>
+            </div>
+            
+        </div>
+        <hr class="striped u-space-none" />
+    </section>
+
+    
+    {% include "shared/steps.html" %}
+
+    {% include "shared/solutions.html" %}
+    
+{% endblock %}
