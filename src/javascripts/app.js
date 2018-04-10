@@ -63,6 +63,7 @@ const subNav          = document.querySelector('.js-subnav');
 var isSubNavActive    = false;
 
 subNavToggle.onclick = function toggleSubNav (event) {
+    event.preventDefault();
     if (isSubNavActive === true) {
       removeClasses(subNavToggle,subNav);
     //   menuToggle.focus();

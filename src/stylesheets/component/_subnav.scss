@@ -1,3 +1,7 @@
+/**
+ * Subnav
+ */
+
 .subnav {
     @include breakpoint(screen(md)) {
         display: none;
