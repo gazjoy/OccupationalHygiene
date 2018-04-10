@@ -1,0 +1,14 @@
+.subnav {
+    @include breakpoint(screen(md)) {
+        display: none;
+        &.is-active {
+            display: block;
+        }
+
+        position: absolute;
+        top: 100%;
+        background-color: color(neutral, white);
+        padding: spacing();
+        border: 3px solid color(brand, steel);
+    }
+}

@@ -22,3 +22,10 @@ body {
 //.cc-mode-preview {
 //    padding-top: 80px;
 //}
+
+a:focus,
+*:focus,
+.is-focus {
+  outline: 2px dotted #aeb0b5;
+  outline-offset: 3px;
+}

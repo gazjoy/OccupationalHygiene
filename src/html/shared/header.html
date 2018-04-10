@@ -1,27 +1,21 @@
 <header role="banner" class="header" id="header">
     <div class="header__header">
-        <div class="header__logo js-anchor-nav">
+        <div class="header__logo">
             {% include "shared/logo.html" %}
         </div>
     </div>
     <div class="header__body">
-        <button class="ui-btn ui-menu-toggle u-visible-xs">Menu</button>
+        <button class="btn btn--brand-aqua u-pull-right menu-toggle js-menu-toggle u-visible-xs u-visible-sm">
+            {{ sprite('menu') }}
+            <span>Menu</span>
+        </button>
 
-        <nav class="ui-nav ui-nav-mobile">
-            <button class="ui-btn ui-menu-close">Close Menu</button>
-            <ul class="nav nav--pills">
-                <li><a href="#">Item</a></li>
-                <li><a href="#">Item</a></li>
-                <li><a href="#">Item</a></li>
-                <li><a href="#">Item</a></li>
-            </ul>
-        </nav>
-
-        <nav class="header__nav u-hidden-xs">
+        <nav class="header__nav nav-mobile js-nav-mobile">
+            <button class="btn btn--brand-gold js-menu-close u-visible-xs u-visible-sm">Close Menu</button>
             <ol class="nav nav--branded">
                 <li>
-                    <a href="#" data-cc-toggle-action="activate" data-cc-toggle-target="#subnav">Solutions</a>
-                    <ul class="u-hidden"> 
+                    <a href="#subnav" class="u-hidden-xs u-hidden-sm js-subnav-toggle">Solutions</a>
+                    <ul class="u-list-unstyled subnav js-subnav"> 
                         <li><a title="Noise Monitoring" href="/noise-monitoring.html">Noise Monitoring</a></li> 
                         <li><a title="Air Monitoring" href="/air-monitoring.html">Air Monitoring</a></li> 
                         <li><a title="LEV Testing" href="/local-exhaust-ventilation.html">Local Exhaust Ventilation (LEV)</a></li> 
@@ -33,9 +27,10 @@
                 <li><a href="/profile.html">Profile</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ol>
+            <div class="header__tel u-hidden-xs u-hidden-sm">
+                Call: <a href="tel: {{company_tel}}">{{company_tel}}</a>
+            </div>
         </nav>
-		<div class="header__tel u-hidden-xs u-hidden-sm">
-			<a href="tel: {{company_tel}}">Call: {{company_tel}}</a>
-		</div>
+		
     </div>
 </header>

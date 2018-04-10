@@ -3,9 +3,9 @@ require('./modules')
 console.log(`app.js has loaded!`)
 
 const siteBody      = document.querySelector('body');
-const menuToggle    = document.querySelector('.ui-menu-toggle');
-const menuClose     = document.querySelector('.ui-menu-close');
-const menuDrawer    = document.querySelector('.ui-nav-mobile');
+const menuToggle    = document.querySelector('.js-menu-toggle');
+const menuClose     = document.querySelector('.js-menu-close');
+const menuDrawer    = document.querySelector('.js-nav-mobile');
 var isActive        = false;
 
 // Use escape key to close drawer
@@ -14,6 +14,9 @@ document.onkeyup = function(e) {
     var charCode = (typeof e.which == "number")?e.which:e.keyCode;
     if (charCode == 27 && isActive) { 
         menuClose.click();
+    }
+    if (charCode == 27 && isSubNavActive) { 
+        subNavToggle.click();
     }
 }
 
@@ -53,3 +56,21 @@ menuClose.onclick = function closeNav (event) {
         isActive = true;
     }
 }
+
+// toggle subnav
+const subNavToggle    = document.querySelector('.js-subnav-toggle');
+const subNav          = document.querySelector('.js-subnav');
+var isSubNavActive    = false;
+
+subNavToggle.onclick = function toggleSubNav (event) {
+    if (isSubNavActive === true) {
+      removeClasses(subNavToggle,subNav);
+    //   menuToggle.focus();
+        isSubNavActive = false;
+  
+    } else {
+      addClasses(subNavToggle,subNav);
+    //   menuClose.focus();
+        isSubNavActive = true;
+    }
+  }

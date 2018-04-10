@@ -21,6 +21,10 @@
     width: auto;
     fill: currentColor;
 
+    * {
+        fill: currentColor;
+    }
+
     &::moz-focus-inner {
         border: 0;
         padding: 0;
@@ -30,7 +34,10 @@
     
     &:focus {
         box-shadow: 0 0 5px 0 rgba(color(neutral, black),.3);
-        outline: none;
+    }
+    .sprite {
+        vertical-align: middle;
+        margin-right: spacing(xs);
     }
 }
 
