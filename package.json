@@ -4,7 +4,7 @@
   "description": "(formerly gulp-starter) A full featured configurable gulp asset pipeline and static site builder",
   "license": "MIT",
   "engines": {
-    "node": ">=6.11.1",
+    "node": ">=8.16.0",
     "npm": ">=3.10.3"
   },
   "main": "gulpfile.js/index.js",
